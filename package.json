@@ -4,7 +4,7 @@
   "description": "",
   "main": "fetchProduct.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.11"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }
