@@ -1,0 +1,24 @@
+{
+  "name": "amazon-web-scrapping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fetchProduct.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diaas14/amazon-web-scrapping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diaas14/amazon-web-scrapping/issues"
+  },
+  "homepage": "https://github.com/diaas14/amazon-web-scrapping#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.11"
+  }
+}
