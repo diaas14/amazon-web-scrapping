@@ -9,12 +9,24 @@ test("Show correct rating", async () => {
   expect(res).toBe("4.7");
 });
 
-test("Show incorrect rating", async () => {
-  const res = await productDetails.getRating(
-    "B01F1CE2NM",
-    productDetails.fetchProduct
-  );
-  expect(res).toBe("4.8");
-});
+ test("Show for product with new rating", async () => {
+   const res = await productDetails.getRating(
+     "B09ZLQXMXX",
+     productDetails.fetchProduct
+   );
+   expect(res).toBe("");
+  
+ });
+
+ test("Checking availability for an invalid ASIN", async () => {
+   const res = await productDetails.getRating(
+     "INVALIDASI",
+     productDetails.fetchProduct
+   );
+   expect(res).toBe("AxiosError");
+ });
+
+
+
 
 
