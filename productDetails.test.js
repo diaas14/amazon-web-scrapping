@@ -1,12 +1,12 @@
 const productDetails = require("./productDetails");
 
 describe("Request successful tests", () => {
-  test("Check if request is successful and if product details are fetched for valid ASIN", async () => {
+  test("Check if request is successful and if product details are fetched for an invalid ASIN", async () => {
     const res = await productDetails.fetchProduct("2123355");
     expect(res).toEqual("AxiosError: Request failed with status code 404");
   });
 
-  test("Check if request is successfulfor an invalid ASIN", async () => {
+  test("Check if request is successful for an valid ASIN", async () => {
     const res = await productDetails.fetchProduct("B08VN53D3P");
     const expected_res = {
       title: "USPA Men T-Shirt",
