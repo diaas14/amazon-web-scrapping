@@ -9,24 +9,18 @@ test("Show correct rating", async () => {
   expect(res).toBe("4.7");
 });
 
- test("Show for product with new rating", async () => {
-   const res = await productDetails.getRating(
-     "B09ZLQXMXX",
-     productDetails.fetchProduct
-   );
-   expect(res).toBe("");
-  
- });
+test("Show for product with new rating", async () => {
+  const res = await productDetails.getRating(
+    "B09ZLQXMXX",
+    productDetails.fetchProduct
+  );
+  expect(res).toBe("");
+});
 
- test("Checking availability for an invalid ASIN", async () => {
-   const res = await productDetails.getRating(
-     "INVALIDASI",
-     productDetails.fetchProduct
-   );
-   expect(res).toBe("AxiosError");
- });
-
-
-
-
-
+test("Checking availability for an invalid ASIN", async () => {
+  const res = await productDetails.getRating(
+    "INVALIDASI",
+    productDetails.fetchProduct
+  );
+  expect(res).toBe("AxiosError: Request failed with status code 404");
+});

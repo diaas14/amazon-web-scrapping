@@ -25,7 +25,7 @@ describe("Product title tests", () => {
       "INVALIDASI",
       productDetails.fetchProduct
     );
-    expect(res).toBe("AxiosError");
+    expect(res).toBe("AxiosError: Request failed with status code 404");
   });
 
   test("Show correct product title", async () => {

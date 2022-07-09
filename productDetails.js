@@ -109,4 +109,4 @@ module.exports = {
   getFeatures,
 };
 
-fetchProduct("B08VN53D3P").then((res) => console.log(res));
+// fetchProduct("B08VN53D3P").then((res) => console.log(res));

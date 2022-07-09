@@ -9,12 +9,12 @@ describe("Product availability tests", () => {
     expect(res).toBe("In stock.");
   });
 
-  test("Checking availability for a product having 1 item in stock", async () => {
+  test("Checking availability for a product having few items in stock", async () => {
     const res = await productDetails.getAvailability(
       "B01F1CE2NM",
       productDetails.fetchProduct
     );
-    expect(res).toBe("Only 1 left in stock.");
+    expect(res).toBe("Only 2 left in stock.");
   });
 
   test("Checking availability for a product that's out of stock", async () => {
@@ -38,6 +38,6 @@ describe("Product availability tests", () => {
       "INVALIDASI",
       productDetails.fetchProduct
     );
-    expect(res).toBe("AxiosError");
+    expect(res).toBe("AxiosError: Request failed with status code 404");
   });
 });

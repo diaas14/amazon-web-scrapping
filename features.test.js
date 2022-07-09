@@ -22,11 +22,10 @@ test("Show correct no of features", async () => {
   expect(res.length).toBe(5);
 });
 
-
 test("Product that is unavailable with no features", async () => {
   const res = await productDetails.getFeatures(
     "INVALIDASI",
     productDetails.fetchProduct
   );
-  expect(res).toBe("AxiosError");
+  expect(res).toBe("AxiosError: Request failed with status code 404");
 });
