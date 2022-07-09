@@ -53,7 +53,8 @@ const fetchProduct = async (productASIN) => {
 
     return product;
   } catch (err) {
-    return err.name;
+    // return err.name;
+    return err.toString();
   }
 };
 
@@ -107,3 +108,5 @@ module.exports = {
   getRating,
   getFeatures,
 };
+
+fetchProduct("B08VN53D3P").then((res) => console.log(res));
